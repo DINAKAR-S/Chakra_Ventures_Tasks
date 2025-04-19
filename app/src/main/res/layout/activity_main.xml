@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/button_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Request Camera Permission"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/button_mic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Request Mic Permission"
+            app:layout_constraintTop_toBottomOf="@id/button_camera"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/button_fetch_books"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Fetch Books"
+            app:layout_constraintTop_toBottomOf="@id/button_mic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/button_fetch_ipl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Fetch IPL Teams"
+            app:layout_constraintTop_toBottomOf="@id/button_fetch_books"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <Button
+            android:id="@+id/button_installed_apps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Show Installed Apps"
+            app:layout_constraintTop_toBottomOf="@id/button_fetch_ipl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/text_api_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="API Output"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:background="#EEEEEE"
+            app:layout_constraintTop_toBottomOf="@id/button_installed_apps"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/text_installed_apps"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Installed apps list"
+            android:textSize="16sp"
+            android:background="#EEEEEE"
+            android:padding="10dp"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toBottomOf="@id/text_api_result"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
